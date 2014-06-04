@@ -14,7 +14,8 @@ class Claymores extends PluginBase {
     }
     
     public function onEnable() {
-        $this->getServer()->getPluginManager()->registerEvents($this, $this);    
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $this->getLogger()->log("Claymores has been enabled.");
 	//$this->config = new Config($this->api->plugin->configPath($this)."config.yml", CONFIG_YAML, array('ClaymoreBlock' => 44, 'ExplosionSize' => 5, 'BlockDestroy' => false));
 	//$this->api->event("entity.move", array($this, "entitymove"));
         //$this->claymore = $this->config->get('ClaymoreBlock');
@@ -48,5 +49,6 @@ class Claymores extends PluginBase {
     }
 	
     public function onDisable(){
+        $this->getLogger()->log("Claymoes has been disabled.");
     }
 }
