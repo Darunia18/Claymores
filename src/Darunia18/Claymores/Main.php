@@ -7,8 +7,8 @@ use pocketmine\event\entity\EntityMoveEvent;
 use pocketmine\plugin\PluginBase;
 
 class Claymores extends PluginBase {
-    private $api;
-    private $config;
+    //private $api;
+    //private $config;
     
     public function onLoad(){
     }
