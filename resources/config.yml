@@ -2,3 +2,6 @@ ClaymoreBlock: 44
 ExplosionSize: 5
 BlockDestroy: false
 ActivateNearbyClaymores: false
+#MobActivation: false
+#ItemActivation: false
+#MinecartActivation: false
