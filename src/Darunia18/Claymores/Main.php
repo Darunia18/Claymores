@@ -19,12 +19,12 @@ class Claymores extends PluginBase {
     
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getLogger()->log("Claymores has been enabled.");
         $config = $this->getConfig();
         $this->claymore = $config->get("ClaymoreBlock");
         $this->explosionSize = $config->get("ExplosionSize");
         $this->blockDestroy = $config->get("BlockDestroy");
         $this->activateNearbyClaymores = $config->get("ActivateNearbyClaymores");
+        $this->getLogger()->log("Claymores has been enabled.");
 	}
 	
     /** 
@@ -53,6 +53,7 @@ class Claymores extends PluginBase {
     }
 	
     public function onDisable(){
+        $this->config->save();
         $this->getLogger()->log("Claymores has been disabled.");
     }
 }
