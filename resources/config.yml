@@ -1,0 +1,4 @@
+ClaymoreBlock: 44
+ExplosionSize: 5
+BlockDestroy: false
+ActivateNearbyClaymores: false
