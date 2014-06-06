@@ -34,6 +34,11 @@ class Claymores extends PluginBase {
      * @ignoreCalcelled false
      */
     public function onMove(EntityMoveEvent $event){
+        $pos = $event->getVector(); //Not sure if this is right
+        $x = $pos->getx(); //Not sure if this is right
+        $y = $pos->gety(); //Not sure if this is right
+        $z = $pos->getz(); //Not sure if this is right
+        
 	//$claymore = $data->level->getBlock(new Vector3($data->x, ($data->y -1), $data->z));
 	//if($claymore->getID() == $this->claymore){
             //if($this->blockDestroy = true){
