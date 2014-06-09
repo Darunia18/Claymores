@@ -34,18 +34,14 @@ class Claymores extends PluginBase {
      * @ignoreCalcelled false
      */
     public function onMove(EntityMoveEvent $event){
-        $pos = $event->getVector(); //Not sure if this is right
-        $x = $pos->getx(); //Not sure if this is right
-        $y = $pos->gety(); //Not sure if this is right
-        $z = $pos->getz(); //Not sure if this is right
-        
-	//$claymore = $data->level->getBlock(new Vector3($data->x, ($data->y -1), $data->z));
-	//if($claymore->getID() == $this->claymore){
-            //if($this->blockDestroy = true){
-		//$explosion = new Explosion(new Position($data->x, ($data->y -1), $data->z, $data->level), $this->explosionSize);
-		//$explosion->explode();
-            //}
-            //else{
+        $entity = $event->getEntity();
+        $claymore = $entity->getLevel()->getBlock(new Vector3($entity->x, ($entity->y -1), $entity->z));
+	if($claymore->getID() == $this->claymore){
+            if($this->blockDestroy = true){
+		$explosion = new Explosion(new Position($entity->x, ($entity->y -1), $entity->z, $entity->level), $this->explosionSize);
+		$explosion->explode();
+            }
+            else{
 		//something with getting rid of explosion and doing player damage
 		//$eidOfPlayer = $this->api->player->getByEID($username); DOESN'T WORK!!!
 		//$attack = 1?
@@ -53,8 +49,8 @@ class Claymores extends PluginBase {
 		//$force = 1?
 		//remove explosion somehow
 		//$this->api->entity->harm($eidOfPlayer, $attack, $cause, $force);
-            //}
-	//}
+            }
+	}
     }
 	
     public function onDisable(){
