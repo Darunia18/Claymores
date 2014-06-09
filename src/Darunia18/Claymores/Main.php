@@ -42,13 +42,6 @@ class Claymores extends PluginBase {
 		$explosion->explode();
             }
             else{
-		//something with getting rid of explosion and doing player damage
-		//$eidOfPlayer = $this->api->player->getByEID($username); DOESN'T WORK!!!
-		//$attack = 1?
-		//$cause = ?
-		//$force = 1?
-		//remove explosion somehow
-		//$this->api->entity->harm($eidOfPlayer, $attack, $cause, $force);
             }
 	}
     }
