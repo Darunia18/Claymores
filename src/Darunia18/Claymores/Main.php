@@ -3,10 +3,10 @@
 namespace Darunia18\Claymores;
 
 use pocketmine\event\entity\EntityMoveEvent;
-//use pocketmine\event\Listener;
+use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 
-class Claymores extends PluginBase {
+class Main extends PluginBase implements Listener{
     //private $api;
     //private $config;
     private $claymore;
@@ -24,7 +24,7 @@ class Claymores extends PluginBase {
         $this->explosionSize = $config->get("ExplosionSize");
         $this->blockDestroy = $config->get("BlockDestroy");
         $this->activateNearbyClaymores = $config->get("ActivateNearbyClaymores");
-        $this->getLogger()->log("Claymores has been enabled.");
+        $this->getLogger()->info("Claymores has been enabled.");
 	}
 	
     /** 
@@ -42,12 +42,12 @@ class Claymores extends PluginBase {
 		$explosion->explode();
             }
             else{
+                //Future code goes here
             }
 	}
     }
 	
     public function onDisable(){
-        $this->config->save();
-        $this->getLogger()->log("Claymores has been disabled.");
+        $this->getLogger()->info("Claymores has been disabled.");
     }
 }
