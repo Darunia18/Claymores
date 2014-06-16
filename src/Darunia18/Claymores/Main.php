@@ -4,6 +4,8 @@ namespace Darunia18\Claymores;
 
 use pocketmine\event\entity\EntityMoveEvent;
 use pocketmine\event\Listener;
+use pocketmine\level;
+use pocketmine\level\Position;
 use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener{
