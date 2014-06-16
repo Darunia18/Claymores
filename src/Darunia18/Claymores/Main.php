@@ -37,8 +37,8 @@ class Main extends PluginBase implements Listener{
      */
     public function onMove(EntityMoveEvent $event){
         $entity = $event->getEntity();
-        $claymore = $entity->getLevel()->getBlock(new Vector3($entity->x, ($entity->y -1), $entity->z));
-	if($claymore->getID() == $this->claymore){
+        $claymore = $entity->getLevel()->getBlockIdAt($entity->x, ($entity->y -1), $entity->z);
+	if($claymore == $this->claymore){
             if($this->blockDestroy = true){
 		$explosion = new Explosion(new Position($entity->x, ($entity->y -1), $entity->z, $entity->level), $this->explosionSize);
 		$explosion->explode();
