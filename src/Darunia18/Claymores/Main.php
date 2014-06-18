@@ -10,8 +10,6 @@ use pocketmine\level\Position;
 use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener{
-    //private $api;
-    //private $config;
     private $claymore;
     private $explosionSize;
     private $blockDestroy;
@@ -41,7 +39,7 @@ class Main extends PluginBase implements Listener{
         $claymore = $entity->getLevel()->getBlockIdAt($entity->x, ($entity->y -1), $entity->z);
 	if($claymore == $this->claymore){
             if($this->blockDestroy = true){
-		$explosion = new Explosion(new Position($entity->x, ($entity->y -1), $entity->z, $entity->level), $this->explosionSize);
+		$explosion = new Explosion(new Position($entity->x, ($entity->y -1), $entity->z, $entity->getLevel()), $this->explosionSize);
                 $explosion->explode();
             }
             else{
