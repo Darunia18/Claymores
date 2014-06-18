@@ -5,6 +5,7 @@ namespace Darunia18\Claymores;
 use pocketmine\event\entity\EntityMoveEvent;
 use pocketmine\event\Listener;
 use pocketmine\level;
+use pocketmine\level\Explosion;
 use pocketmine\level\Position;
 use pocketmine\plugin\PluginBase;
 
@@ -41,7 +42,7 @@ class Main extends PluginBase implements Listener{
 	if($claymore == $this->claymore){
             if($this->blockDestroy = true){
 		$explosion = new Explosion(new Position($entity->x, ($entity->y -1), $entity->z, $entity->level), $this->explosionSize);
-		$explosion->explode();
+                $explosion->explode();
             }
             else{
                 //Future code goes here
