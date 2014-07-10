@@ -1,7 +1,19 @@
+#This changes the block that will explode when stepped on
 ClaymoreBlock: 44
+
+#This changes how big of an explosion will occur when a Claymore is activated
 ExplosionSize: 5
-BlockDestroy: false
+
+#If set to true, claymores will destroy land when activated
+BlockDestroy: true
+
+#When set to true, Claymores caught within the explosion will explode as well
+#This is currently not implemented
 ActivateNearbyClaymores: false
-#MobActivation: false
-#ItemActivation: false
-#MinecartActivation: false
+
+#These determine what entities can activate a Claymore
+PlayerActivation: true
+MobActivation: false
+ProjectileActivation: false
+ItemActivation: false
+VehicleActivation: false
