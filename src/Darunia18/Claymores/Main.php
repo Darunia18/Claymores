@@ -49,7 +49,7 @@ class Main extends PluginBase implements Listener{
         $entity = $event->getEntity();
         $claymore = $entity->getLevel()->getBlockIdAt($entity->x, ($entity->y -0.5), $entity->z);
         if($claymore == $this->claymore){
-            if($entity instanceof Human){
+            if($entity instanceof \pocketmine\entity\Human){
                 if($this->playerActivation){
                     if($this->blockDestroy){
                         $explosion = new Explosion(new Position($entity->x, ($entity->y -0.5), $entity->z, $entity->getLevel()), $this->explosionSize);
@@ -63,9 +63,9 @@ class Main extends PluginBase implements Listener{
                     }
                 }
             }
-            elseif($entity instanceof Living){
+            elseif($entity instanceof \pocketmine\entity\Living){
                 if($this->mobActivation){
-                    if($entity instanceof Human){
+                    if($entity instanceof \pocketmine\entity\Human){
                         //nothing
                     }
                     if($this->blockDestroy){
@@ -80,7 +80,7 @@ class Main extends PluginBase implements Listener{
                     }
                 }
             }
-            elseif($entity instanceof Projectile){
+            elseif($entity instanceof \pocketmine\entity\Projectile){
                 if($this->projectileActivation){
                     if($this->blockDestroy){
                         $explosion = new Explosion(new Position($entity->x, ($entity->y -0.5), $entity->z, $entity->getLevel()), $this->explosionSize);
@@ -94,7 +94,7 @@ class Main extends PluginBase implements Listener{
                     }
                 }
             }
-            elseif($entity instanceof DroppedItem){
+            elseif($entity instanceof \pocketmine\entity\DroppedItem){
                 if($this->itemActivation){
                     if($this->blockDestroy){
                         $explosion = new Explosion(new Position($entity->x, ($entity->y -0.5), $entity->z, $entity->getLevel()), $this->explosionSize);
@@ -108,7 +108,7 @@ class Main extends PluginBase implements Listener{
                     }
                 }
             }
-            elseif($entity instanceof Vehicle){
+            elseif($entity instanceof \pocketmine\entity\Vehicle){
                 if($this->vehicleActivation){
                     if($this->blockDestroy){
                         $explosion = new Explosion(new Position($entity->x, ($entity->y -0.5), $entity->z, $entity->getLevel()), $this->explosionSize);
