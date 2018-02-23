@@ -1,6 +1,8 @@
 Claymores
 =========
 
+# NOTICE: This plugin has been abandoned. Feel free to fork it, but I will not be updating it or fixing it for use in future versions of PocketMine.
+
 This is the source code to my PocketMine plugin Claymores, being coded in the new API (1.0.0).
 
 All the versions released on here will always be in a semi-working condition, and if there are any bugs, they will be stated with the commit. I may post commits on here to share my development with others and get other developers' insight and suggestions.
